@@ -1,0 +1,13 @@
+package practice24.dragonballspring;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class DragonballSpringApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
