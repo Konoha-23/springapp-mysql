@@ -16,14 +16,12 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
-		
-		<java.version>1.8</java.version>
 		<spring-boot.version>2.1.5.RELEASE</spring-boot.version>
 		<spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
 		<logstash-logback-encoder.version>6.1</logstash-logback-encoder.version>
-		<sonar.host.url>https://sonarqube.devopsnetwork.net/</sonar.host.url>
+		<sonar.host.url>https://qa.devopsnetwork.net/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
-		<sonar.password>Arsenal</sonar.password>
+		<sonar.password>Arsenal24</sonar.password>
 	</properties>
 	<dependencies>
 		<dependency>
