@@ -3,6 +3,6 @@ FROM openjdk:17.0-jdk
 RUN apk update && apk add /bin/sh
 RUN mkdir -p /opt/app
 ENV PROJECT_HOME /opt/app
-COPY target/dragonball-spring.jar $PROJECT_HOME/dragonball-spring.jar
+COPY target/dragonball-spring.war $PROJECT_HOME/dragonball-spring.war
 WORKDIR $PROJECT_HOME
-CMD ["java" ,"-jar","./dragonball-spring.jar"]
+CMD ["java" ,"-jar","./dragonball-spring.war"]
