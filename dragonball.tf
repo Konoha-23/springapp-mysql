@@ -5,6 +5,6 @@ resource "helm_release" "dragonball-mysql" {
   repository = "https://konoha-23.github.io/springapp-mysql/" #updated repository link
   chart      = "springapp-mysql"
   values = [
-    "${file("dragonball-mysql.yml")}"
+    "${file("dragonball.yml")}"
   ]
 }
