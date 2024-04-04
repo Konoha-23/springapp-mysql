@@ -140,16 +140,16 @@ mysqlhost: dragonball-mysql
 mysqlport: 
 
 # Enter the name for MYSQL Database Name
-mysqldatabase: null
+mysqldatabase: ""
 
 #Enter the name for an existing secret key for MYSQl database custom user
-mysqluser: null #root or princebabs
+mysqluser: "" #root or princebabs
 
 #Enter the name for an existing MYSQl secret
-mysqlsecretName: null #mysql-auth
+mysqlsecretName: "" #mysql-auth
 
 #Enter the name for an existing secret key for MYSQl database user's password
-mysqlpassword: null #mysql-root-password or mysql-password
+mysqlpassword: "" #mysql-root-password or mysql-password
  
 
 
