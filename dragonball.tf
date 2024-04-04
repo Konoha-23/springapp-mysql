@@ -1,4 +1,4 @@
-resource "helm_release" "dragonball-mysql" {
+resource "helm_release" "dragonball" {
   name       = "dragonball-mysql"
   #create_namespace = true
   namespace  = "db" #konoha
