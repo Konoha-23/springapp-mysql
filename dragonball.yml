@@ -143,7 +143,7 @@ mysqlport:
 mysqldatabase: goku
 
 #Enter the name for an existing secret key for MYSQl database custom user
-mysqluser: princebabs
+mysqluser: root
 
 #Enter the name for an existing MYSQl secret
 mysqlsecretName: mysql-auth
