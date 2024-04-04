@@ -1,0 +1,20 @@
+pipeline{
+    agent { 
+        label 'kubernetes'
+  }
+    stages{
+        //stage('Clone Code'){
+            //steps{
+                //sh "echo cloning code"
+                //sh "echo clone code complete"
+                //https://github.com/Konoha-23/springapp-mysql.git
+            //}
+        //}
+        stage('Destroy dragonball.devopsnetwork.net'){
+            steps{
+              sh "echo 'Create dragonball.devopsnetwork.net'"
+              sh "terraform apply --auto-approve"   
+            }
+        }
+    }
+}
