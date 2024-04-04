@@ -3,12 +3,12 @@ entries:
   springapp-mysql:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-03-29T13:17:11.155555628-07:00"
+    created: "2024-04-04T05:10:39.167652758-07:00"
     description: A Helm chart for Kubernetes
-    digest: fe99f37f3a845531aa9c6eb4fd033cd5750c993692fea7329f1181f10cf347aa
+    digest: 6a290f1e738028131b32ee5ef4bd2ddd3c25ad7066cfa8660af463e9155543d1
     name: springapp-mysql
     type: application
     urls:
     - springapp-mysql-0.1.0.tgz
     version: 0.1.0
-generated: "2024-03-29T13:17:11.153216843-07:00"
+generated: "2024-04-04T05:10:39.164796549-07:00"

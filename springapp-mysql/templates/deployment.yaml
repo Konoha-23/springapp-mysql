@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "spring-mongo.fullname" . }}
+  name: {{ include "springapp-mysql.fullname" . }}
   labels:
     app: {{ .Values.metadata.labels.app }}
 spec:
@@ -31,7 +31,7 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "spring-mongo.serviceAccountName" . }}
+      serviceAccountName: {{ include "springapp-mysql.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
@@ -45,17 +45,19 @@ spec:
               containerPort: {{ .Values.service.port }}
               protocol: TCP
           env:
-          - name: MONGO_DB_HOSTNAME
-            value: {{ .Values.mysqlhostname}}
-          - name: MYSQL_DB_USERNAME
-            value: {{ .Values.mysqlbusername}}
+          - name: MYSQL_HOST
+            value: {{ .Values.mysqlhost}}
+          - name: MYSQL_USER
+            value: {{ .Values.mysqluser}}
+          - name: MYSQL_PORT
+            value: {{ .Values.mysqlport}}
           - name: MYSQL_DATABASE
-            value: {{ .Values.mysqldatabasename}}
-          - name: MYSQL_DB_PASSWORD
+            value: {{ .Values.mysqldatabase}}
+          - name: MYSQL_PASSWORD
             valueFrom:
               secretKeyRef:
                 name: {{ .Values.mysqlsecretName}}
-                key: {{ .Values.mysqlrootpasswordkey}}
+                key: {{ .Values.mysqlpassword}}
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
           readinessProbe:

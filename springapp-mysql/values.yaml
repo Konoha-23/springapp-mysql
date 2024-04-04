@@ -9,7 +9,7 @@ replicaCount: 1
 
 selector:
   matchLabels:
-    app: "springapp"
+    app: "springapp-mysql"
 
 strategy:
    type: RollingUpdate
@@ -17,7 +17,7 @@ strategy:
      maxUnavailable: 1
 
 image:
-  repository: mylandmarktech/spring-boot-mongo
+  repository: mylandmarktech/dragonball-spring
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
@@ -39,7 +39,7 @@ serviceAccount:
 
 podAnnotations: {}
 podLabels: 
-  app: springapp
+  app: springapp-mysql
 
 podSecurityContext: {}
   # fsGroup: 2000
@@ -58,7 +58,7 @@ service:
   targetPort: 3306
 
 serviceSelector:
-    app: springapp
+    app: springapp-mysql
 
 ingress:
   enabled: false
@@ -133,18 +133,26 @@ affinity: {}
 
 #MYSQL DB credentials
 
+#Enter the name for MYSQL Database Hostname
+mysqlhost: 
+
+# Enter the name for MYSQL Port number
+mysqlport: 
+
+# Enter the name for MYSQL Database Name
+mysqldatabase: 
+
+#Enter the name for an existing secret key for MYSQl database custom user
+mysqluser: 
+
 #Enter the name for an existing MYSQl secret
 mysqlsecretName: 
 
-#Enter the name for an existing secret key for MYSQl root user 
-mysqlusername: 
+#Enter the name for an existing secret key for MYSQl database user's password
+mysqlpassword: 
+ 
 
 
-#Enter the name for an existing secret key for MYSQl root password
-mysqlrootpasswordkey: 
 
-#Enter the name for MYSQL Database Hostname
-mysqlhostname: 
 
-# Enter the name for MYSQL Database Name
-mysqldatabasename:
+
