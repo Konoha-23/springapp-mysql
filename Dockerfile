@@ -10,6 +10,6 @@ EXPOSE 8080
 #ENV MYSQL_HOST=
 #ENV MYSQL_PORT=3306
 
-CMD ["java" ,"-jar","Dragonball-spring/target/dragonball-spring.jar.original"]
+CMD ["java" ,"-jar","dragonball-spring.jar"]
 
 #Added port 8080 to expose DragonBall app
