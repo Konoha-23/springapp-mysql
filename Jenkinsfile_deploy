@@ -30,7 +30,7 @@ pipeline{
         }
         stage('Deploy dragonball.devopsnetwork.net'){
             steps{
-              sh "echo 'Create dragonball.devopsnetwork.net
+              sh "echo 'Create dragonball.devopsnetwork.net'"
               sh "terraform apply --auto-approve"   
             }
         }
