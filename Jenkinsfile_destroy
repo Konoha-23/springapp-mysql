@@ -13,7 +13,7 @@ pipeline{
         stage('Destroy dragonball.devopsnetwork.net'){
             steps{
               sh "echo 'Create dragonball.devopsnetwork.net'"
-              sh "terraform apply --auto-approve"   
+              sh "terraform destroy --auto-approve"   
             }
         }
     }
