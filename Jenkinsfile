@@ -26,22 +26,22 @@ pipeline{
       //sh  "echo All conditions met/passed"
       //}
     //}
-    stage('predeployment'){
-    steps{
-      sh "echo creating docker image"
-      sh "docker build -t princebabs/dragonball-spring . "
-      }
-    }
+    //stage('predeployment'){
+    //steps{
+      //sh "echo creating docker image"
+      //sh "docker build -t princebabs/dragonball-spring . "
+      //}
+    //}
       //stage('login to DockerHub'){
         //withCredentials([usernamePassword(credentialsId: 'DockerHub-Credentials', passwordVariable: 'DOCKER_HUB_PASSWORD', usernameVariable: '')]) {
           //sh "docker login -u princebabs -p ${DOKCER_HUB_PASSWORD} "
       //}
     //}
-    stage('Push to DockerHub'){
-      steps{
-        sh "docker push princebabs/dragonball-spring"
-      }
-    }
+    //stage('Push to DockerHub'){
+      //steps{
+        //sh "docker push princebabs/dragonball-spring"
+      //}
+    //}
     //stage('UnDeploy'){
     //  steps{
     //    sh "echo UNDEPLOYING existing application"
