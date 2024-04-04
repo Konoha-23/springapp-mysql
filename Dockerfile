@@ -1,8 +1,9 @@
 FROM openjdk:17.0-jdk
 # #Required for starting application up.
-#RUN mkdir -p /opt/app
-#ENV PROJECT_HOME=/opt/app
-COPY target/*.jar /home/docker/
+RUN mkdir -p /opt/app
+ENV PROJECT_HOME=/opt/app
+COPY target/*.jar $PROJECT_HOME/
+WORKDIR $PROJECT_HOME
 EXPOSE 8080
 #ENV MYSQL_USER=
 #ENV MYSQL_PASSWORD=
