@@ -1,5 +1,5 @@
 resource "helm_release" "dragonball" {
-  name       = "dragonball-mysql"
+  name       = "dragonball"
   #create_namespace = true
   namespace  = "db" #konoha
   repository = "https://konoha-23.github.io/springapp-mysql/" #updated repository link
