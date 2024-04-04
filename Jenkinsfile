@@ -48,11 +48,11 @@ pipeline{
     //    sh "docker rm -f webapp"
     //  }
     //}
-    stage('deployment'){
-      steps{
-        sh "echo application ready for deployment"
-        sh "docker run -d -p 80:8080 --name konoha princebabs/dragonball-spring"
-      }
-    }
+    //stage('deployment'){
+      //steps{
+        //sh "echo application ready for deployment"
+        //sh "docker run -d -p 80:8080 --name konoha princebabs/dragonball-spring"
+      //}
+    //}
   }
 }
