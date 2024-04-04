@@ -29,7 +29,7 @@ pipeline{
     stage('predeployment'){
     steps{
       sh "echo creating docker image"
-      sh "docker build -t princebabs/dragonball-spring:v1 . "
+      sh "docker build -t princebabs/dragonball-spring:v2 . "
       }
     }
       //stage('login to DockerHub'){
@@ -39,7 +39,7 @@ pipeline{
     //}
     stage('Push to DockerHub'){
       steps{
-        sh "docker push princebabs/dragonball-spring:v1"
+        sh "docker push princebabs/dragonball-spring:v2"
       }
     }
     //stage('UnDeploy'){
