@@ -9,7 +9,7 @@ replicaCount: 1
 
 selector:
   matchLabels:
-    app: "springapp-mysql"
+    app: 
 
 strategy:
    type: RollingUpdate
@@ -39,7 +39,7 @@ serviceAccount:
 
 podAnnotations: {}
 podLabels: 
-  app: springapp-mysql
+  app: 
 
 podSecurityContext: {}
   # fsGroup: 2000
@@ -58,7 +58,7 @@ service:
   targetPort: 8080
 
 serviceSelector:
-    app: springapp-mysql
+    app: 
 
 ingress:
   enabled: false
