@@ -137,7 +137,7 @@ affinity: {}
 mysqlhost: dragonball-mysql
 
 # Enter the name for MYSQL Port number
-mysqlport: 3306
+mysqlport: 
 
 # Enter the name for MYSQL Database Name
 mysqldatabase: goku
