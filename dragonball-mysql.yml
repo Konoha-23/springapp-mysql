@@ -134,7 +134,7 @@ affinity: {}
 #MYSQL DB credentials
 
 #Enter the name for MYSQL Database Hostname
-mysqlhost: 
+mysqlhost: dragonball-mysql
 
 # Enter the name for MYSQL Port number
 mysqlport: 3306
